@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 /**
  * Used for executing the game
  */
-public class RunGame
+public class Main
 {
     private final static int TIME_DELAY = 20; //Change so time delay is smaller, balance game
     private final static int TIME_DELAY_MOVE_PATTERN = 100;
