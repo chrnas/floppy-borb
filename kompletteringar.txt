@@ -1,0 +1,64 @@
+Se kommentarer från handledare nedan. Förklaring till varje kommentar ges precis under kommentaren. 
+
+=============================================================================
+Kommentarer, handledare 1
+=============================================================================
+
+Projekt:  Floppy Bord
+
+Grupp:    Christoffer Näs/chrna581, Hugo Nilsson/hugni385
+
+UML-diagram: 4
+
+Kommentarer:
+
+Well-written report, however I don't think "Grafik" and "Logik" should be subsections to "Karaktärer och spelobjekt".
+
+It would be nice to divide classes into different packages.
+ - Done. The project is now divided into several different packages. 
+
+There's a lot of warnings in the inspection, you should try to fix as many as possible.
+- Went through project inspection and fixed several warnings, 
+
+Some classes are missing javadocs.
+- Added javadocs to all classes.
+
+Clean up code that isn't used, e.g code that has been commented.
+- Done. Code that isn't used has been removed and other code has been simplified, across the entire project.
+
+You should use a more generalized method to handle collisions, right now you have a method for each different collision and also a method for each different object list to check if its empty.
+- Done. Each collision is now handled the same way by comparing the coordinates of the bird to the object that it is colliding into in the same method. 
+
+It would be good to use an interface to generalize different objects, this way you are able to store them in one list instead of having a list for each object and you will be able to combine a lot of methods into a single method instead in TopClass.
+- Done. Each object is now stored in the same list in TopClass (TopClass has been renamed Board). This is the epicBird.
+
+Methods should be made private if they aren't supposed to be used outside of the class e.g checkForRemovable methods, spawnMeteorsPeriodically, moveMeteor
+- Done. Fields and methods that could be private have been set to private. 
+
+TopClass could be renamed, it is not clear what it is supposed to represent.
+- As stated above TopClass has been renamed to Board. We believe board better represents its function, since it is technically responsible for what happens on the playing field, the board.
+
+It would be nice to store the structure of enemies, birds and objects etc inside json files instead of having them listed in the code.  [Not necessary, though.]
+- Not done.
+
+In drawBird you should use a map or similar to determine which color to use instead of a switch case, that way we can avoid the duplicate code for drawing the rect. Same goes for drawObstacles, drawBullets, drawPowerups and drawEnemies, however the solution in drawObstacles, drawBullets, drawPowerups and drawEnemies would be ok even if a map would look more pretty.
+- drawBird now uses a map instead.
+
+The drawing methods could also be more generalized if we used an interface as mentioned in previous comment regarding adding an interface.
+- 
+
+=============================================================================
+Kommentarer, handledare 2
+=============================================================================
+
+General comments:
+- The game is fun. Could be better with using proper graphics - but this is not an issue.
+- make sure you take advantage of the inspection report.
+- The code is mostly easy to follow, but use packages
+- There's quite a lot of code repetition.
+
+
+Specific comments:
+- getSquaretype accesses the array without range checking. It causes an index out of bounds exception.
+- SquareType[50][50] - use constants, now you cannot easily resize the "board" without changing things in several places.
+    * We have changed the way the size of the board is determined by introducing the global constants GAME_HEIGHT and GAME_WIDTH
