@@ -1,6 +1,7 @@
 # Floppy-borb
 
-Floppy-borb is an action packed 2d game.
+Floppy-borb is a casual game with fun and simple gameplay.
+![image](https://github.com/chrnas/floppy-borb/assets/116513364/13fe4033-dcd8-4761-b472-78114e0a7a57)
 
 ## Installation
 ### Play game
