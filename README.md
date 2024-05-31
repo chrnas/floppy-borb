@@ -5,7 +5,8 @@ Floppy-borb is a casual game with fun and simple gameplay.
 
 ## Installation
 ### Play game
-To run game make sure Java is installed and launch the JavaOO.jar file
+1. To run game first make sure Java is installed. 
+2. Download and launch the JavaOO.jar file.
 
 ### Development
 Clone this repo.
